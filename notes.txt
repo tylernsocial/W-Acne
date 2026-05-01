@@ -1,0 +1,103 @@
+What falls under inflammatory:
+
+Papules (small red bumps)
+Pustules (pus-filled bumps)
+Nodules (deep, hard bumps)
+Cysts (deep, fluid-filled)
+Hormonal acne (same lesions, just triggered differently)
+Nodulocystic acne (severe end of the spectrum)
+
+Comedonal"These are clogged pores — not infected yet"
+Inflammatory"This is active acne — bacteria is involved"
+Pityrosporum"This looks like acne but is actually fungal"
+Clear skin"Your skin is clear — you may be in maintenance phase"
+Scarring"This is scarring/PIH — not active acne, needs different care"
+
+
+Comedonal:
+
+Include
+Visible blackheads (open comedones)
+Whiteheads (closed comedones)
+Skin-colored bumps, no redness
+Clogged pores with no inflammation
+
+Exclude
+Any redness or swelling present
+Pus-filled lesions
+Painful-looking deep bumps
+Post-acne marks or pits
+
+Edge case rule
+One small red pimple present alongside comedones → label as inflammatory, not comedonal
+
+Inflammatory (mild–severe)
+
+Include
+Red papules (solid red bumps)
+Pustules (pus-filled with red base)
+Nodules (deep, hard, painful-looking)
+Cysts (deep, fluid-filled)
+Hormonal pattern (jawline/chin)
+Mixed comedonal + inflammatory
+
+Exclude
+No active red lesions present
+Uniform tiny bumps with no redness (→ pityrosporum)
+Only flat dark marks remaining
+Only comedones, zero redness
+
+Edge case rule
+Active lesions + scarring in same image → label by the active acne, ignore the scarring
+
+Pityrosporum folliculitis
+
+Include
+Uniform small itchy bumps
+Located on chest, back, or shoulders
+No blackheads or whiteheads present
+Bumps all roughly same size
+Confirmed fungal source (e.g. labeled dataset)
+
+Exclude
+Blackheads or whiteheads visible
+Lesions of varying sizes
+Located only on face (ambiguous)
+Cannot confirm fungal origin
+
+Edge case rule
+If unsure whether it's pityrosporum or mild inflammatory, exclude the image entirely — this is your hardest class
+
+Clear skin
+
+Include
+No active lesions of any kind
+Smooth, even skin texture
+Normal pores visible (not clogged)
+Skin on face, cheek, forehead, chin
+
+Exclude
+Any active lesion present, even minor
+Visible scarring or PIH marks
+Redness or irritation visible
+Image quality too low to confirm
+
+Edge case rule
+Skin with faded old marks but zero active lesions → label as clear skin, not scarring
+
+Scarring
+
+Include
+Icepick, boxcar, or rolling scars
+PIH — flat dark or red marks
+Textural changes from past acne
+No active lesions dominating image
+
+Exclude
+Active lesions present alongside marks
+Marks so faint they read as clear skin
+Non-acne scarring (cuts, burns)
+Hyperpigmentation from other causes
+
+Edge case rule
+Active acne + scarring together → label as inflammatory, not scarring. Scarring label = scarring is the main feature
