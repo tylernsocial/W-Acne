@@ -4,3 +4,8 @@ If the model's top prediction is below say 70% confidence → show a "we couldn'
 Only show a class label when confidence is high enough
 
 safety net without needing to collect clear skin images.
+
+start with a split of:
+train: 70%
+validation: 15%
+test: 15%
