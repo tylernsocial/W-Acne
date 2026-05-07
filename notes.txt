@@ -104,7 +104,12 @@ Active acne + scarring together → label as inflammatory, not scarring. Scarrin
 
 df contains the processed image file paths and their labels. I used scikit-learn’s train_test_split to divide this dataset into training, validation, and testing sets. The split was stratified by label so that each class kept a similar distribution across the three sets.
 
-Baseline Model Interpretation
+Baseline Model Interpretation with an image split of 
+inflammatory_acne    50
+comedonal_open       33
+acne_excoriee        25
+acne_scars           15
+comedonal_closed     14
 
 The baseline Logistic Regression model achieved a validation accuracy of 23.8%, which is only slightly above random guessing for a 5-class classification problem. This suggests that flattened pixel values are not enough to capture the visual patterns needed to distinguish acne categories.
 
