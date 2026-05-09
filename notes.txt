@@ -116,3 +116,11 @@ The baseline Logistic Regression model achieved a validation accuracy of 23.8%, 
 The model performed best on inflammatory_acne and comedonal_open, but failed to correctly identify acne_excoriee, acne_scars, and comedonal_closed in the validation set. This is likely due to the small dataset size, class imbalance, and the loss of spatial information caused by flattening the images.
 
 These results support the need for a CNN model, which can learn spatial features such as texture, local patterns, and lesion shape more effectively than a traditional flattened-pixel baseline.
+
+Updated Baseline Model Interpretation
+
+After increasing and balancing the dataset, the Logistic Regression baseline improved from 23.8% validation accuracy to 31.6%. This shows that improving dataset balance helped the model, but overall performance is still limited.
+
+The model performed best on comedonal_open and inflammatory_acne, but struggled heavily with acne_excoriee and comedonal_closed. This is likely because Logistic Regression uses flattened pixel values, which removes spatial information and makes it difficult to learn subtle skin texture patterns.
+
+These results suggest that a CNN is more appropriate for this task because it can learn local visual features such as lesion shape, texture, redness, and clustered patterns.
