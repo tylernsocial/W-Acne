@@ -124,3 +124,12 @@ After increasing and balancing the dataset, the Logistic Regression baseline imp
 The model performed best on comedonal_open and inflammatory_acne, but struggled heavily with acne_excoriee and comedonal_closed. This is likely because Logistic Regression uses flattened pixel values, which removes spatial information and makes it difficult to learn subtle skin texture patterns.
 
 These results suggest that a CNN is more appropriate for this task because it can learn local visual features such as lesion shape, texture, redness, and clustered patterns.
+
+
+CNN Training Interpretation
+
+The CNN training accuracy increased from around 21% to 54%, while the training loss steadily decreased. This shows that the model is learning patterns from the training set.
+
+However, the validation accuracy fluctuated and did not consistently improve, while the validation loss increased after the early epochs. This suggests overfitting: the model is becoming better on the training images but is not generalizing well to unseen validation images.
+
+Because the dataset is still relatively small, the validation accuracy is also unstable. Each validation image has a noticeable effect on the final percentage. The result shows that the CNN has more learning capacity than the baseline model, but additional regularization, data augmentation, and/or more training data are needed to improve generalization.
