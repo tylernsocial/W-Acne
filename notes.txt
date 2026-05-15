@@ -177,3 +177,12 @@ This experiment used gentler data augmentation and a higher early-stopping patie
 The best validation accuracy was around 38.7%, while the Logistic Regression baseline achieved 51.6%. This suggests that the custom CNN trained from scratch is not generalizing well with the current dataset size.
 
 Since the CNN is learning the training data but not improving consistently on validation data, the next step is to use transfer learning with a pretrained model such as MobileNetV2.
+
+
+L2 Regularization Experiment Interpretation
+
+This experiment added L2 regularization and increased dropout to 0.5 to further reduce overfitting. However, validation accuracy did not improve, and the model performed worse than both the Logistic Regression baseline and the earlier CNN models.
+
+The lower training accuracy suggests that the model may now be too restricted, meaning it is underfitting rather than simply overfitting. This shows the tradeoff between regularization and learning capacity: too little regularization can cause memorization, but too much can prevent the model from learning useful patterns.
+
+Since multiple custom CNN experiments did not outperform the baseline, the next step is transfer learning with a pretrained model such as MobileNetV2.
