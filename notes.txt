@@ -186,3 +186,9 @@ This experiment added L2 regularization and increased dropout to 0.5 to further 
 The lower training accuracy suggests that the model may now be too restricted, meaning it is underfitting rather than simply overfitting. This shows the tradeoff between regularization and learning capacity: too little regularization can cause memorization, but too much can prevent the model from learning useful patterns.
 
 Since multiple custom CNN experiments did not outperform the baseline, the next step is transfer learning with a pretrained model such as MobileNetV2.
+
+Transfer Learning with MobileNetV2 Experiment
+
+After testing a Logistic Regression baseline and several custom CNN models, the next experiment uses transfer learning. The custom CNN models struggled to generalize well, likely because the dataset is small and the classes are visually similar.
+
+Transfer learning uses a pretrained model, MobileNetV2, as a feature extractor. The base model was trained on a large image dataset and has already learned general visual patterns such as edges, textures, and shapes. By freezing the base model and training only a new classification head, the model can adapt these learned features to the acne classification task without needing to learn all visual features from scratch.
