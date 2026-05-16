@@ -192,3 +192,11 @@ Transfer Learning with MobileNetV2 Experiment
 After testing a Logistic Regression baseline and several custom CNN models, the next experiment uses transfer learning. The custom CNN models struggled to generalize well, likely because the dataset is small and the classes are visually similar.
 
 Transfer learning uses a pretrained model, MobileNetV2, as a feature extractor. The base model was trained on a large image dataset and has already learned general visual patterns such as edges, textures, and shapes. By freezing the base model and training only a new classification head, the model can adapt these learned features to the acne classification task without needing to learn all visual features from scratch.
+
+Transfer Learning Interpretation
+
+The MobileNetV2 transfer learning model performed significantly better than the custom CNN models. Validation accuracy reached around 67.7%, compared to 51.6% for the Logistic Regression baseline and below 50% for the custom CNN models.
+
+Both training and validation accuracy increased together, and both training and validation loss decreased steadily. This suggests that the pretrained MobileNetV2 feature extractor is learning more generalizable image features than the CNN trained from scratch.
+
+Because validation loss was still decreasing at the end of 30 epochs, the next experiment will train the transfer learning model for more epochs with early stopping.
